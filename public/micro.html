@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microwave page</title>
+</head>
+<style>
+    #container {
+        display: flex;
+    }
+
+    #slider {
+        position: relative;
+        overflow: hidden;
+        width: 37.5%;
+        margin-left: 200px;
+    }
+
+    #images {
+        display: flex;
+    }
+
+    #images img {
+        transition: all 0.15s ease;
+        width: 100%;
+        height: 500px;
+    }
+
+    #images input {
+        display: none;
+    }
+
+    #dots {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    #dots label {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: solid #22212179 2px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        margin: 5px;
+    }
+
+    #dots label:hover {
+        background: #000000a6;
+    }
+
+    #img1:checked~.m1 {
+        margin-left: 0;
+    }
+
+    #img2:checked~.m2 {
+        margin-left: -100%;
+    }
+
+    #img3:checked~.m3 {
+        margin-left: -200%;
+    }
+
+    #img4:checked~.m4 {
+        margin-left: -301%;
+    }
+
+    #description {
+        border: 1px solid rgba(184, 184, 184, 0.226);
+        height: 530px;
+        width: 450px;
+        margin-left: 20px;
+        padding: 30px;
+    }
+
+    #description>h4 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 30px;
+    }
+
+    #description>h5>strike {
+        font-size: large;
+    }
+
+    #description>h5 {
+        font-family: monospace;
+    }
+
+    #description>h5>span {
+        font-size: large;
+        margin-left: 20px;
+        background-color: rgb(231, 16, 16);
+    }
+
+    #description>h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: -10px;
+        width: 100px;
+    }
+
+    #description>ul {
+        margin-left: -20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        line-height: 20px;
+        margin-top: -10px;
+    }
+
+    #description>.bullet {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        line-height: 20px;
+        background-color: rgba(139, 139, 139, 0.185);
+    }
+
+    #description>.bullet>h4 {
+        margin-left: 20px;
+    }
+
+    #description>.bullet>ul {
+        margin-left: -20px;
+    }
+
+    .devider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(118, 123, 124, 0.719);
+        display: inline-block;
+        margin-bottom: -10px;
+    }
+
+    .btn1 {
+        height: 40px;
+        width: 250px;
+        border-radius: 30px;
+        margin-left: 80px;
+        margin-bottom: 13px;
+        background-color: orange;
+        margin-top: 10px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn2 {
+        height: 40px;
+        width: 250px;
+        border-radius: 30px;
+        margin-left: 80px;
+        border: none;
+        background-color: rgba(143, 143, 143, 0.507);
+        cursor: pointer;
+    }
+
+    .btn1:hover {
+        background-color: rgba(184, 183, 183, 0.26);
+    }
+
+    .btn2:hover {
+        background-color: rgba(184, 183, 183, 0);
+
+    }
+
+    @media screen and (min-width: 350px) and (max-width:767px) {
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slider {
+            margin: auto;
+            width: 300px;
+            margin-bottom: 50px;
+        }
+
+        #description {
+            margin-left: 50px;
+            width: 300px;
+        }
+
+        #description>button {
+            margin-left: -0px;
+            margin-left: 20px;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width:1023px) {
+
+        #slider {
+            margin-left: -1px;
+            margin-left: 50px;
+        }
+
+        #description {
+            margin-left: 50px;
+            width: 300px
+        }
+
+        #description>button {
+            margin-left: -0px;
+            margin-left: 20px;
+        }
+
+
+    }
+</style>
+
+<body>
+
+    <div id="container">
+
+        <div id="slider">
+
+            <div id="images">
+
+                <input type="radio" name="slide" id="img1" checked>
+                <input type="radio" name="slide" id="img2">
+                <input type="radio" name="slide" id="img3">
+                <input type="radio" name="slide" id="img4">
+
+                <img src="https://whirlpoolindia.vtexassets.com/arquivos/ids/161143-800-auto?v=637894861124000000&width=800&height=auto&aspect=true"
+                    class="m1" alt="img1">
+                <img src="https://whirlpoolindia.vtexassets.com/arquivos/ids/161144-800-auto?v=637894861396770000&width=800&height=auto&aspect=true"
+                    class="m2" alt="img2">
+                <img src="https://whirlpoolindia.vtexassets.com/arquivos/ids/161145-800-auto?v=637894861588200000&width=800&height=auto&aspect=true"
+                    class="m3" alt="img3">
+                <img src="https://whirlpoolindia.vtexassets.com/arquivos/ids/161146-800-auto?v=637894861848330000&width=800&height=auto&aspect=true"
+                    class="m4" alt="img4">
+            </div>
+
+            <div id="dots">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+                <label for="img4"></label>
+
+            </div>
+
+        </div>
+
+        <div id="description">
+            
+            <h4>8 Kg Semi Automatic with Extra Soak time - Ace Super Soak</h4>
+            <h5><strike style="color: rgb(80, 85, 78);">MRP ₹23,150</strike><span>33% OFF</span></h5>
+            <h2>₹15,490</h2>
+
+            <ul>
+
+                <li>No Cost EMI X 6 Months*</li>
+                <li>5% Bank Cashback upto ₹2500*T&C</li>
+
+            </ul>
+
+            <span class="devider"></span>
+
+            <div class="bullet">
+                <h4>Key features</h4>
+
+                <ul>
+                    <li>Air fryer</li>
+                    <li>Sanitization</li>
+                    <li>300 ACMr</li>
+                    <li>Motorized Rotisserie</li>
+
+                </ul>
+            </div>
+
+            <button class="btn1">Buy now</button>
+            <button class="btn2">Buy with Exchange Up to ₹9900/- OFF</button>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

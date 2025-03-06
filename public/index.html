@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>whirpool</title>
+</head>
+<script src="script file/script.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+  .navbar>ul>.login>a>img {
+    margin-right: 10px;
+
+  }
+
+  /* this is for small screen */
+
+  @media screen and (min-width: 350px) and (max-width:767px) {
+
+    #slider {
+      width: 100%;
+    }
+
+    #slider>#images {
+      height: 200px;
+    }
+
+    #div1 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 200px);
+    }
+
+    #container5 {
+      display: grid;
+      grid-template-columns: repeat(1, 300px);
+      justify-content: center;
+    }
+
+    #discover {
+      display: grid;
+      grid-template-columns: repeat(1, 300px);
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+
+    }
+
+    #discover>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: -50px;
+
+    }
+
+    .devider1 {
+      display: none;
+    }
+
+    #ifram {
+      width: 100%;
+    }
+
+    .inner-div {
+      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1;
+      height: 400px;
+    }
+
+    .inner-div>p {
+      margin-left: -50px;
+    }
+
+    .inner-div>button {
+      margin-left: 12px;
+    }
+
+    #mini-container {
+      width: 100%;
+      height: 2000px;
+      display: grid;
+      grid-template-columns: repeat(1, 300px);
+      justify-content: center;
+      align-items: center;
+      margin-bottom: -500px;
+    }
+
+    #mini-container>.image {
+      margin: auto;
+      margin-bottom: -200px;
+      margin-top: -50px;
+    }
+
+    #mini-container>#para {
+      margin-bottom: -200px;
+    }
+
+    #mini-container>#para2 {
+      margin: auto;
+    }
+
+    #register-div {
+      height: 1000px;
+      width: 100%;
+    }
+
+
+
+    /* NAVBAR */
+
+    .nav-toggler {
+      display: block;
+      color: black;
+      border: rgba(225, 244, 250, 0.411);
+    }
+
+    .navbar {
+      /* min-height: 60px; */
+      display: flex;
+      justify-content: space-around;
+
+    }
+
+    .navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 100px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0, 0, 0, 0.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      display: block;
+
+    }
+
+    .navbar ul li {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+
+    }
+
+    .navbar ul li a {
+      padding: 25px;
+      color: bisque;
+    }
+
+    .navbar ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: bisque;
+    }
+
+    .navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+
+  }
+
+  /* this is for medium screen like tab */
+
+  @media screen and (min-width: 768px) and (max-width:1023px) {
+
+
+    #slider {
+      width: 100%;
+    }
+
+    #div1 {
+      display: grid;
+      grid-template-columns: repeat(2, 100px);
+      width: 100%;
+    }
+
+    #div1>div {
+      margin-left: -80px;
+    }
+
+    #container5 {
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
+      justify-content: center;
+
+    }
+
+    #discover {
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
+      width: 100%;
+    }
+
+    #discover>div {
+      gap: 30px;
+      width: 300px;
+      margin-right: 20px;
+      height: 670px;
+      margin-bottom: 20px;
+    }
+
+    #discover>div>img {
+      height: 300px;
+      width: 300px;
+    }
+
+    #ifram {
+      width: 100%;
+    }
+
+
+    .inner-div {
+      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1;
+      height: 400px;
+    }
+
+    .inner-div>p {
+      margin-left: -50px;
+    }
+
+    #mini-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
+      justify-content: center;
+      align-items: center;
+      grid-row-gap: -1000px;
+    }
+
+    #mini-container> #para2{
+      margin-top: -100px;
+      margin-left: -1px;
+    }
+
+   
+    /* NAVBAR */
+
+
+    .nav-toggler {
+      display: block;
+      border: rgba(225, 244, 250, 0.411);
+      color: black;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 100px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0, 0, 0, 0.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      display: block;
+    }
+
+    .navbar ul li {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .navbar ul li a {
+      padding: 25px;
+      color: bisque;
+    }
+
+    .navbar ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: bisque;
+    }
+
+    .navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+
+  }
+</style>
+
+<body>
+
+  <div id="container">
+
+    <div class="navbar">
+      <div class="logo"><img src="whirlpool.logo.png" alt="">
+      </div>
+      <ul>
+        <li><a href="Ref.html">Refrigerator</a> </li>
+        <li><a href="Machine.html">Washing Machines</a> </li>
+        <li><a href="Micro2.html">Microwaves</a> </li>
+        <li><a href="cart.html" class="cart-logo"><i class='bx bx-cart-alt'></i></a> </li>
+      </ul>
+
+      <button class="nav-toggler">
+        <i class='bx bx-menu'></i>
+      </button>
+
+    </div>
+
+    <span class="devider3"></span>
+
+    <div id="slider">
+
+      <div id="images">
+
+        <input type="radio" name="slide" id="img1" checked>
+        <input type="radio" name="slide" id="img2">
+        <input type="radio" name="slide" id="img3">
+        <input type="radio" name="slide" id="img4">
+
+        <img
+          src="https://whirlpoolindia.vtexassets.com/assets/vtex.file-manager-graphql/images/7778f15c-cad3-4aa6-af4d-4eb2cec27bb6___fbb45fbedc04927111f92d0076c135c7.gif"
+          class="m1" alt="img1">
+        <img src="img3.jpg" class="m2" alt="img2">
+        <img src="img5.jpg" class="m3" alt="img3">
+        <img src="img4.jpg" class="m4" alt="img4">
+      </div>
+
+      <div id="dots">
+        <label for="img1"></label>
+        <label for="img2"></label>
+        <label for="img3"></label>
+        <label for="img4"></label>
+
+      </div>
+    </div>
+
+
+
+    <div id="div1">
+
+      <div>
+        <div class="para1"><img src="bus.svg" alt="busimg" height="40px" width="40px"></div>
+
+        <p><span>Free Delivery in 48 hrs</span><br>and Express Installation*</p>
+      </div>
+
+
+      <div>
+        <div class="para1"><img src="return img.svg" alt="img2" height="40px" width="40px"></div>
+
+        <p> <span>‘No Questions Asked’ Returns</span><br>Within 7 days*</p>
+      </div>
+
+      <div>
+        <div class="para1"><img src="offerimg.svg" alt="" height="40px" width="40px"></div>
+
+        <p><span>Exchange Offer</span><br>Up to ₹ 9900/- off on Exchange*</p>
+
+      </div>
+
+      <div>
+        <div class="para1"><img src="primimg.svg" alt="" height="40px" width="40px"></div>
+
+        <p><span>Premium Care</span><br>Same day service visit</p>
+      </div>
+
+    </div>
+
+    <!-- ************************************************************************** -->
+
+
+    <div id="wrapper">
+
+      <div class="tital1">
+        <div class="cls1"></div>
+        <h3 class="cls2">Best Selling Refrigerators</h3>
+      </div>
+
+      <!-- fetched data we are appending in this container -->
+      <div id="container5"></div>
+    </div>
+
+
+
+    <!-- ************************************************************************* -->
+
+
+    <div class="tital1">
+      <div class="cls1"></div>
+      <h3 class="cls2">Discover Whirlpool </h3>
+    </div>
+
+
+
+    <div id="discover">
+
+      <div>
+        <img src="https://www.mother.ly/wp-content/uploads/2021/10/origin-4366.jpg" alt="" height="300px" width="400px">
+        <h5> Everyday, Care</h5>
+        <h3>Behind every chore is an act of love</h3>
+        <p>Whirlpool Brand exists to help families thrive. We believe the simple acts of care they give, day in and day
+          out, have the power to change the world.</p>
+      </div>
+
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAPDiQkDnsTFWEJjE7IYi8hcMAcSyr5ZW4bfi8IV8jsIkVv0NwcDdSbXVLu9IopM5xrgE&usqp=CAU"
+          height="300px" width="400px" alt="">
+        <h5>About Us</h5>
+        <h3>Over 112 years of globle expertise</h3>
+        <p>Embracing the brand philosophy of Every Day Care, Whirlpool is committed towards providing solutions that are
+          meaningful and advanced with consumers at the heart</p>
+      </div>
+
+      <div>
+        <img src="https://life2life.com.my/storage/app/uploads/public/61f/58d/35c/61f58d35c64ed689243171.png"
+          height="300px" width="400px" alt="">
+        <h5>Sustainability</h5>
+        <h3>Improving Life at home Sustainably</h3>
+        <p>Our commitment towards improving life at home is brought to life through the choice and investment we make
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- embeded videi -->
+
+
+    <div class="teaser">
+      <h2>Know more about our Premium Range of Refrigerators</h2>
+    </div>
+
+    <span class="devider1"></span>
+
+    <div id="ifram"><iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/duQ0uSHzH-s?si=Rm81r1Yx9zcZ_SQw" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div id="register-div">
+      <div class="inner-div">
+        <h5>Receive our offers, releases and promos!</h5>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="E-mail">
+        <p>By subscribing the newsletter, you agree to our<br> <a href="#">Terms and Conditions.</a></p>
+        <button>Register</button>
+        </a>
+      </div>
+
+
+      <div id="mini-container">
+
+        <div class="image">
+          <div class="image1">
+            <img src="whirlpool.logo.png" height="40px" width="180px" alt="">
+            <h4>Follow us:</h4>
+          </div>
+
+          <div class="image2">
+            <img src="https://whirlpoolindia.vtexassets.com/arquivos/facebook-whirlpool-footer-2019.png.png"
+              height="25px" width="15px" alt="">
+            <img src="https://whirlpoolindia.vtexassets.com/arquivos/twitter-whirlpool-footer-2019.png.png"
+              height="20px" width="25px" alt="">
+            <img src="https://whirlpoolindia.vtexassets.com/arquivos/instagram-whirlpool-footer-2019.png.png"
+              height="25px" width="25px" alt="">
+            <img src="https://whirlpoolindia.vtexassets.com/arquivos/youtube-whirlpool-footer-2019.png.png"
+              height="25px" width="25px" alt="">
+          </div>
+
+
+        </div>
+
+        <div id="para">
+          <h3>Discover Whirlpool</h3>
+          <p>
+            The Company<br>
+            The Brand<br>
+            Export<br>
+            Media Room<br>
+            Careers<br>
+            Investors<br>
+            Sustainability<br>
+            Awards and Recognition</p>
+        </div>
+
+
+        <div id="para" class="end-para">
+          <h3>Whirlpool Products</h3>
+          <p>
+            Refrigerators<br>
+            Washing Machine<br>
+            Air Conditioners<br>
+            Microwaves<br>
+            Dishwasher</p>
+        </div>
+
+
+        <div id="para" class="end-para">
+          <h3>Service & Support</h3>
+          <p>
+            Customer Support<br>
+            Track Order<br>
+            Shipping Policy<br>
+            Request Service Online<br>
+            Ticket Status</p>
+        </div>
+
+
+
+        <div id="para2">
+          <h3>Contact Us</h3>
+
+          <div class="cont">
+            <img
+              src="https://whirlpoolindia.vtexassets.com/assets/vtex/assets-builder/whirlpoolindia.whirlpoolindia-store/1.1.116/images/Footer-icon-mail___327d4f120c3f31d37aee83c0dc4c2c6a.png"
+              alt="">
+            <p><span>Email</span><br>helpdeskindia@whirlpool.com</p>
+          </div>
+
+
+          <div class="cont">
+            <img
+              src="https://whirlpoolindia.vtexassets.com/assets/vtex/assets-builder/whirlpoolindia.whirlpoolindia-store/1.1.116/images/Footer-icon-tel___29cc47ba8318e68f117e3a66fd8d90ad.png"
+              alt="">
+            <p><span>Call</span><br>1800 208 1800 (Toll Free)</p>
+          </div>
+
+          <div class="cont">
+            <img
+              src="https://whirlpoolindia.vtexassets.com/assets/vtex/assets-builder/whirlpoolindia.whirlpoolindia-store/1.1.116/images/Footer-icon-whatsapp___8b64280befb7e138262267787136e4d3.png"
+              alt="">
+            <p><span>Whatsapp</span>+91 9667427767</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- container end -->
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #939598;
+        stroke-width: 1.82px;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke-linecap: square;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" x1="47.51" y1="36.87" x2="23.44" y2="36.87"/>
+  <path class="cls-2" d="M16.36,17.57h30.2c.9,0,1.63,.73,1.63,1.63v29.21H14.7V19.23c0-.92,.74-1.66,1.66-1.66Z"/>
+  <line class="cls-3" x1="10.15" y1="28.37" x2="2" y2="28.37"/>
+  <line class="cls-3" x1="10.15" y1="34.26" x2="3.88" y2="34.26"/>
+  <line class="cls-3" x1="10.15" y1="40.14" x2="5.56" y2="40.14"/>
+  <polygon class="cls-3" points="48.46 26.88 57.98 26.88 61.2 30.24 68 37.32 68 48.41 48.46 48.41 48.46 26.88"/>
+  <polyline class="cls-4" points="59.71 29.46 52.31 29.46 52.31 37.78 53.18 37.78 66.85 37.78"/>
+  <circle class="cls-1" cx="27.35" cy="47.59" r="4.35"/>
+  <circle class="cls-1" cx="59.77" cy="48.07" r="4.35"/>
+</svg>
