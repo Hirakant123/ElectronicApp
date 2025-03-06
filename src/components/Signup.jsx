@@ -9,7 +9,7 @@ export const Signup = () => {
     const [pass, setPass] = useState("")
 
     const handleRegister = async () => {
-        let request = await fetch("http://localhost:8080/users/register", {
+        let request = await fetch("https://electronic-app-backend.onrender.com/users/register", {
 
             method: "POST",
             headers: {
